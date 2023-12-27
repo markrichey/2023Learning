@@ -38,6 +38,7 @@ html{
 
 body{
     margin: 0;
+    padding-block-end: 5rem;
 }
 
 h1,h2,h3{
@@ -50,9 +51,56 @@ h1,h2,h3{
 .wrapper{
     margin-inline: auto;
     max-width: 1100px;
+    /*border: 1px solid red;*/
 }
 
 .wrapper-narrow{
-    margin-inline: auto;
     max-width: 550px;
+}
+
+
+header{
+    text-align: center;
+    margin-block: 5rem;
+    /*border: 2px solid lime;*/
+}
+
+.layout-grid{
+    --gap: 2rem;
+    display: flex;
+    gap: var(--gap);
+}
+
+.layout-grid > * {
+    flex: 1;
+}
+
+.col{
+    /*border: 2px solid dodgerblue;*/
+    display: grid;
+    gap: var(--gap);
+    align-content: center;
+}
+
+.card{
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1rem -.5rem rgb(0 50 100 / 0.15);
+    border-radius: 0.5rem;
+    border-top: 8px solid;
+}
+
+.border-teal{
+    border-color: var(--clr-teal);
+}
+
+.border-red{
+    border-color: var(--clr-red);
+}
+
+.border-yellow{
+    border-color: var(--clr-yellow);
+}
+
+.border-blue{
+    border-color: var(--clr-blue);
 }
