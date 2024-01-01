@@ -1,0 +1,40 @@
+/// @description Insert description here
+// You can write your code in this editor
+randomise();
+
+for(var _i = 0; _i < 4; _i+= 1){
+	var x_pos = irandom_range(50,1300);
+	var y_pos = irandom_range(50,700);
+	
+	var inst = instance_create_layer(x_pos,y_pos, "Instances", obTarget);
+}
+
+/// @description Click to move
+// You can write your code in this editor
+
+var instance = instance_position(mouse_x,mouse_y,obTarget);
+if instance_exists(instance) {
+	targetX = mouse_x;
+	taregtY = mouse_y;
+	targetSpeed = playerSpeed;
+}
+
+/// @description Move Towards Target and / or cancel movement	
+// You can write your code in this editor
+
+if(hitTarget){
+	targetX = x;
+	taregtY = y;
+	targetSpeed = 0;
+	speed = 0;
+	hitTarget = false;
+}else{
+
+	if(targetSpeed > 0){
+		if point_distance(x, y, targetX, taregtY) > 1
+		{
+		    move_towards_point(targetX, taregtY, targetSpeed);
+		}
+	}
+
+}
